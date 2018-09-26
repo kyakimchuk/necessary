@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список товаров</title>
+</head>
+<body>
+{% if things_list|length == 0 %}
+    <p>Товаров нет</p>
+{% endif %}
+{% for thing in things_list %}
+	<p><a href="{% url 'thing_detail' pk=thing.id %}">{{ thing.name }}</a></p>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вещь</title>
+</head>
+<body>
+	<p>
+		{% if thing.cat_hierar %}
+			{{ thing.cat_hierar }}
+	    {% endif %}
+	</p>
+	<p>
+		{{ thing.name }}
+	</p>
+	<p>
+		{{ thing.price }}
+	</p>
+	{% if thing.photo1 %}
+            <img src="{{ thing.photo1.url }}" alt="{{ thing.name }}" width="700">
+    {% endif %}
+	<p>
+		{% if thing.size %}
+			{{ thing.size }}
+	    {% endif %}
+	</p>
+	<p>
+		{% if thing.description %}
+			{{ thing.description }}
+	    {% endif %}
+	</p>
+	{% if thing.photo2 %}
+            <img src="{{ thing.photo2.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo3 %}
+            <img src="{{ thing.photo3.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo4 %}
+            <img src="{{ thing.photo4.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo5 %}
+            <img src="{{ thing.photo5.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo6 %}
+            <img src="{{ thing.photo6.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo7 %}
+            <img src="{{ thing.photo7.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+    {% if thing.photo8 %}
+            <img src="{{ thing.photo8.url }}" alt="{{ thing.name }}" width="700"><br>
+    {% endif %}
+</body>
+</html>
